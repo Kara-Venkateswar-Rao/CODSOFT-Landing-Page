@@ -20,7 +20,7 @@ nav{
     height: 10vh;
     width: 100%;
     background-color:#161a3075;
-    box-shadow: 0px 1px 1px #00000096;
+    box-shadow: 0px 1px 1px #000000dc;
     
 }
 nav .logo{
@@ -75,6 +75,7 @@ nav ul li a:hover{
         text-align: center;
         right: -100%;
         transition: all 0.5s;
+        z-index: 99;
     }    
     #check:checked ~ ul{
         right: 0;
@@ -97,6 +98,18 @@ nav ul li a:hover{
         color: #161A30;
     }
     
+}
+@media (max-width:650px) {
+    nav{
+        height: 10vh;
+        line-height: 0rem;
+        gap: 0;
+    }
+    label .logo{
+        font-size: 10px;
+        padding: 0;
+    }
+
 }
 /**_________section__________**/
 section{
@@ -169,17 +182,48 @@ section{
     display: flex;
     
 }
-.crafts a img{
+img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
     transition: all ease 0.5s;
+    
 }
 img:hover{
     scale: 1.05;
 }
-
+@media (max-width:650px){
+    #sec1{
+        height: 120%;
+    }
+    #home{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .section1{
+        height: 50%;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .section1 h2{
+        font-size: 20px;
+    }
+    .section1 p{
+        font-size: 15px;
+    }
+    .section2{
+        margin-top: 20px;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
 /**________about__________**/
 #abt{
     height: 70%;
@@ -213,6 +257,18 @@ img:hover{
     font-size: 20px;
     font-weight: 700;
 }
+@media (max-width:650px) {
+    #abt{
+        height: 100%;
+    }
+    #about h2{
+        font-size: 20px;
+    }
+    #about p{
+        font-size: 15px;
+        text-align: center;
+    }
+}
 /**______services_____**/
 #service{
     height: 80%;
@@ -239,26 +295,95 @@ img:hover{
     padding: 10px;
     border-radius: 5px;
 }
+.products h4{
+    font-size: 15px;
+    text-align: center;
+}
 .products::-webkit-scrollbar{
     display: none;
 }
 .art{
     height: 250px;
     width: 46%;
-    background-color: #2D2B5D;
+    background-color: #2d2b5dc5;
     border-radius: 5px;
     color: #F2EFE8;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 20px;
 }
 .show{
     background: #000;
     height: 80%;
     width: 30%;
     border-radius: 5px;
-    
+    box-shadow: 2px 2px 15px black;
 }
+.art .dtls{
+    height: 180px;
+    width: 160px;
+    line-height: 1.5em;
+    text-align: center;
+    overflow: hidden;
+    transition: all ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* display: none; */
+}
+.art .dtls p{
+    margin-top: 250%;
+    transition: all ease 0.7s;
+}
+.dtls{
+    /* display: none; */
+}
+.art:hover p{
+    margin-top: 10%;
+    display: block;
+}
+@media (max-width:650px){
+    #service{
+        height: 80%;
+        width: 100%;
+        padding: 10px;
+    }
+    .text{
+        width: 100%;
+        font-size: 0.8em;
+        line-height: 1.5rem;
+   }
+    .products{
+        height: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+   }
+    .art{
+        height: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .art h4{
+        font-size: 12px;
+     }
+    .dtls{
+        height: 90px;
+        width: 100px;
+        padding: 20px;
+    }
+    .dtls h3{
+        font-size: 12px;
+    }
+    .dtls p{
+        font-size: 11px;
+        line-height: 15px;
+        
+    }
+} 
 /**_____fiiter_____**/
 footer{
     height: 30%;
@@ -266,7 +391,25 @@ footer{
     background-color: #161A30;
     color: #ebe6d9;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10px;
+    line-height: 2rem;
+}
+@media (max-width:650px) {
+    footer{
+        height: 150px;
+        display: flex;
+        background: #000;
+        justify-content: space-between;
+        line-height: 1rem;
+        padding: 5px;
+        color:#fff;
+    }
+    footer h3{
+        font-size: 15px;
+    }
+    footer p{
+        font-size: 11px;
+    }
 }
